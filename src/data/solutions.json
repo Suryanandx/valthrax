@@ -1,0 +1,99 @@
+{
+  "solutions": [
+    {
+      "id": "fintech",
+      "title": "FinTech",
+      "description": "PCI-aware flows, ledger patterns, pricing engines, risk & compliance hooks, audit trails.",
+      "proofPoints": [
+        "Transaction reliability",
+        "Reconciliation accuracy", 
+        "Partner integrations"
+      ],
+      "keyCapabilities": [
+        "PCI DSS compliance architecture",
+        "Double-entry ledger systems",
+        "Real-time fraud detection",
+        "Regulatory reporting automation",
+        "Multi-currency support",
+        "KYC/AML workflows"
+      ],
+      "techStack": ["Stripe Connect", "Plaid", "Dwolla", "Compliance APIs", "Ledger DBs"]
+    },
+    {
+      "id": "healthtech",
+      "title": "HealthTech", 
+      "description": "HIPAA-minded arch, role-based access, PHI segmentation, eRx/HL7/FHIR integrations.",
+      "proofPoints": [
+        "Privacy controls",
+        "Auditability",
+        "Clinician-first UX"
+      ],
+      "keyCapabilities": [
+        "HIPAA-compliant infrastructure",
+        "PHI encryption and segmentation",
+        "Role-based access controls",
+        "HL7/FHIR integrations",
+        "Clinical decision support",
+        "Audit trail systems"
+      ],
+      "techStack": ["FHIR APIs", "HL7", "AWS HIPAA", "Encrypted databases", "Clinical workflows"]
+    },
+    {
+      "id": "edtech",
+      "title": "EdTech",
+      "description": "Authoring, grading automation, LLM feedback loops, student privacy, district SSO.",
+      "proofPoints": [
+        "Teacher time saved",
+        "Learning outcomes",
+        "Admin adoption"
+      ],
+      "keyCapabilities": [
+        "Content authoring tools",
+        "Automated grading systems",
+        "LLM-powered feedback",
+        "FERPA compliance",
+        "District SSO integration",
+        "Learning analytics"
+      ],
+      "techStack": ["LTI standards", "SAML/SSO", "Learning analytics", "Content APIs", "AI grading"]
+    },
+    {
+      "id": "marketplaces",
+      "title": "Marketplaces & eCommerce",
+      "description": "Catalog, search, attribution, creator/ambassador tools, payments & payouts, fraud/risk.",
+      "proofPoints": [
+        "Conversion lift",
+        "CAC payback",
+        "Return rate reduction"
+      ],
+      "keyCapabilities": [
+        "Multi-vendor catalogs",
+        "Advanced search & filtering",
+        "Payment splitting",
+        "Creator/affiliate tools",
+        "Fraud detection",
+        "Inventory management"
+      ],
+      "techStack": ["Elasticsearch", "Stripe Marketplace", "Fraud tools", "Inventory APIs", "Attribution"]
+    },
+    {
+      "id": "social",
+      "title": "Social/Community Platforms",
+      "description": "Feeds, messaging, moderation tooling, notifications, growth loops.",
+      "proofPoints": [
+        "Retention curves",
+        "DAU/WAU growth",
+        "Spam/abuse reduction"
+      ],
+      "keyCapabilities": [
+        "Real-time messaging",
+        "Content moderation",
+        "Algorithmic feeds",
+        "Push notifications",
+        "Growth mechanics",
+        "Community management"
+      ],
+      "techStack": ["WebSockets", "Redis", "Moderation APIs", "Push services", "Feed algorithms"]
+    }
+  ]
+}

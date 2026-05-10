@@ -1,0 +1,156 @@
+{
+  "hero": {
+    "headline": "Valnora & Elric is a boutique product studio and founding engineering partner.",
+    "subheadline": "We design, ship, and scale venture-grade SaaS/AI—from idea to revenue.",
+    "primaryCTA": {
+      "text": "Book a 30-min blueprint call",
+      "href": "/contact"
+    },
+    "secondaryCTA": {
+      "text": "See our work",
+      "href": "/work"
+    },
+    "credibilityStrip": {
+      "metrics": [
+        { "value": "50K+", "label": "Users served" },
+        { "value": "99.9%", "label": "Uptime delivered" },
+        { "value": "25+", "label": "Products shipped" }
+      ]
+    }
+  },
+  "whyWeExist": {
+    "headline": "Why We Exist",
+    "subheadline": "The problem we solve",
+    "content": [
+      "Startups don't need \"more features\"; they need a system that turns ideas into durable products fast.",
+      "Big agencies over-index on decks; freelancers burn time on rewrites.",
+      "We bring senior-led pods that make technical decisions once, implement them right, and measure business impact."
+    ]
+  },
+  "outcomes": {
+    "headline": "Outcomes We Deliver",
+    "subheadline": "Not just services",
+    "items": [
+      {
+        "title": "0→1 to 1→N",
+        "description": "Working MVP in weeks, hardened v2 without rewrites."
+      },
+      {
+        "title": "Design that converts",
+        "description": "Polished UX, speed + accessibility baked in."
+      },
+      {
+        "title": "Revenue-ready",
+        "description": "Payments, analytics, A/B tests, lifecycle comms from day one."
+      },
+      {
+        "title": "Scale & reliability",
+        "description": "Clean architecture, CI/CD, observability, security controls."
+      }
+    ]
+  },
+  "capabilities": {
+    "headline": "What We Do",
+    "subheadline": "Capability map",
+    "items": [
+      {
+        "title": "Product Engineering",
+        "tech": "React/Next.js, NestJS/Node, FastAPI/Python, Postgres/Prisma"
+      },
+      {
+        "title": "AI & Automation",
+        "tech": "LLM features, agents, data pipelines, evaluation"
+      },
+      {
+        "title": "Mobile",
+        "tech": "React Native CLI, offline-first, app store readiness"
+      },
+      {
+        "title": "Cloud & DevOps",
+        "tech": "AWS/GCP, Terraform, GitHub Actions, zero-downtime releases"
+      },
+      {
+        "title": "Data & Analytics",
+        "tech": "Event models, dashboards, experimentation"
+      },
+      {
+        "title": "Design & Research",
+        "tech": "UX flows, design systems, CRO"
+      },
+      {
+        "title": "RevOps Engineering",
+        "tech": "Payments, pricing, funnels, CRM/CDP wiring"
+      }
+    ]
+  },
+  "whoWeServe": {
+    "headline": "Who We Serve",
+    "content": "Seed–Series B founders, product leaders, and technical CEOs in FinTech, HealthTech, EdTech, eCommerce/marketplaces, and social/community—teams that need velocity without compromising long-term maintainability."
+  },
+  "edge": {
+    "headline": "Our Edge",
+    "subheadline": "Why we make sense",
+    "items": [
+      {
+        "title": "Senior first",
+        "description": "Architects write and review the critical paths; no hand-offs that cause drift."
+      },
+      {
+        "title": "Production-grade from day 1",
+        "description": "IaC, monitoring, error tracking, security baselines."
+      },
+      {
+        "title": "Multi-tenant patterns",
+        "description": "Built to isolate data, enable enterprise deals later."
+      },
+      {
+        "title": "Design × Engineering",
+        "description": "One pod, shared roadmap, measurable UX and revenue lift."
+      },
+      {
+        "title": "Flexible commercials",
+        "description": "Fixed MVP, pod retainers, or cash + equity."
+      }
+    ]
+  },
+  "accelerators": {
+    "headline": "Accelerators & Reusable Kits",
+    "items": [
+      {
+        "title": "SaaS Starter (web)",
+        "description": "Auth, RBAC, billing, plans, analytics, email/push, theming."
+      },
+      {
+        "title": "Mobile App Shell",
+        "description": "RN CLI baseline with navigation, theming, OTA updates."
+      },
+      {
+        "title": "Notifications Center",
+        "description": "Email/push/in-app, templates, preference center."
+      },
+      {
+        "title": "AI Agent Kit",
+        "description": "Retrieval, tools, guardrails, evaluation harness."
+      },
+      {
+        "title": "Infra Modules",
+        "description": "Terraform stacks for app, DB, storage, CDN, observability."
+      },
+      {
+        "title": "Muesli",
+        "description": "Open-source meeting notes. Local Whisper transcription + LLM summaries. No bots, no cloud.",
+        "href": "https://github.com/Suryanandx/muesli",
+        "tag": "open-source"
+      }
+    ],
+    "result": "Faster time-to-value, lower defect rate, predictable delivery."
+  },
+  "finalCTA": {
+    "headline": "Bring us your idea or a messy codebase.",
+    "description": "We'll respond with a 1-page blueprint—architecture, risks, and the fastest safe path to revenue.",
+    "cta": {
+      "text": "Get your blueprint",
+      "href": "/contact"
+    }
+  }
+}

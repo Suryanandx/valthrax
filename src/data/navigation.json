@@ -1,0 +1,63 @@
+{
+  "mainNav": [
+    {
+      "label": "Services",
+      "href": "/services",
+      "megaMenu": {
+        "sections": [
+          {
+            "title": "Core Services",
+            "items": [
+              { "label": "Product Engineering", "href": "/services/product-engineering", "description": "Full-stack web apps with enterprise foundations" },
+              { "label": "AI & Automation", "href": "/services/ai-automation", "description": "LLM features and intelligent workflows" },
+              { "label": "Mobile Development", "href": "/services/mobile", "description": "React Native apps with offline-first patterns" },
+              { "label": "Cloud & DevOps", "href": "/services/cloud-devops", "description": "Secure, automated infrastructure" }
+            ]
+          },
+          {
+            "title": "Specialized",
+            "items": [
+              { "label": "Data & Analytics", "href": "/services/data-analytics", "description": "Event schemas, dashboards, experimentation" },
+              { "label": "Design & Research", "href": "/services/design-research", "description": "Conversion-focused UX and design systems" },
+              { "label": "RevOps Engineering", "href": "/services/revops", "description": "Growth plumbing and revenue optimization" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Solutions",
+      "href": "/solutions",
+      "megaMenu": {
+        "sections": [
+          {
+            "title": "Industries",
+            "items": [
+              { "label": "FinTech", "href": "/solutions/fintech", "description": "PCI-aware flows, ledger patterns, compliance" },
+              { "label": "HealthTech", "href": "/solutions/healthtech", "description": "HIPAA-minded architecture, PHI segmentation" },
+              { "label": "EdTech", "href": "/solutions/edtech", "description": "Authoring, grading automation, student privacy" },
+              { "label": "Marketplaces", "href": "/solutions/marketplaces", "description": "Catalog, search, payments & payouts" },
+              { "label": "Social Platforms", "href": "/solutions/social", "description": "Feeds, messaging, moderation tooling" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Work",
+      "href": "/work"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Process",
+      "href": "/process"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ]
+}

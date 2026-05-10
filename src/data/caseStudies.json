@@ -1,0 +1,100 @@
+{
+  "caseStudies": [
+    {
+      "id": "fintech-banking-platform",
+      "title": "Multi-tenant Banking Platform",
+      "industry": "FinTech",
+      "stage": "Series A",
+      "context": {
+        "problem": "Regional bank needed to launch digital banking platform for SMBs with multi-tenant architecture and regulatory compliance.",
+        "constraints": ["6-month launch deadline", "PCI DSS compliance required", "Integration with legacy core banking"],
+        "stakeholders": ["CTO", "Head of Product", "Compliance team", "Operations"]
+      },
+      "approach": {
+        "architecture": "Microservices with event sourcing, separate tenant databases, API-first design",
+        "decisions": ["PostgreSQL for transactional data", "Redis for caching", "Kafka for event streaming"],
+        "tradeoffs": "Chose tenant-per-database over shared schema for stronger isolation despite higher operational complexity"
+      },
+      "build": {
+        "timeline": "16 weeks total",
+        "keyComponents": ["Account management service", "Transaction processing", "Compliance reporting", "Admin dashboard"],
+        "highlights": ["Week 4: Core banking integration", "Week 8: MVP launch", "Week 12: Compliance audit", "Week 16: Production launch"]
+      },
+      "result": {
+        "metrics": {
+          "uptime": "99.99%",
+          "responseTime": "<200ms",
+          "users": "50K+",
+          "arr": "$2M in 8 months"
+        },
+        "businessOutcome": "Enabled bank to capture SMB market segment, reduced customer acquisition cost by 40%"
+      },
+      "learned": "Event sourcing pattern crucial for audit trails in financial services. Tenant isolation at database level worth the operational overhead.",
+      "stack": ["Next.js", "NestJS", "PostgreSQL", "Redis", "Kafka", "AWS", "Terraform"]
+    },
+    {
+      "id": "healthtech-care-platform",
+      "title": "AI-Powered Care Platform",
+      "industry": "HealthTech",
+      "stage": "Seed",
+      "context": {
+        "problem": "Healthcare startup needed HIPAA-compliant platform with AI-powered diagnosis assistance for primary care physicians.",
+        "constraints": ["HIPAA compliance", "Real-time ML inference", "Integration with EHR systems"],
+        "stakeholders": ["Founder/CEO", "Head of Clinical", "Data Science team"]
+      },
+      "approach": {
+        "architecture": "HIPAA-compliant microservices, ML pipeline with real-time inference, encrypted data at rest and in transit",
+        "decisions": ["AWS HIPAA-eligible services", "Dedicated ML inference cluster", "HL7 FHIR for EHR integration"],
+        "tradeoffs": "Chose dedicated ML infrastructure over serverless for consistent latency despite higher costs"
+      },
+      "build": {
+        "timeline": "12 weeks total",
+        "keyComponents": ["Patient data ingestion", "ML inference engine", "Clinical decision support", "EHR integration"],
+        "highlights": ["Week 3: HIPAA architecture review", "Week 6: ML pipeline deployment", "Week 9: EHR integration", "Week 12: Clinical pilot"]
+      },
+      "result": {
+        "metrics": {
+          "compliance": "HIPAA-compliant",
+          "inferenceTime": "<500ms",
+          "accuracy": "94% diagnostic accuracy",
+          "adoption": "Series A in 6 months"
+        },
+        "businessOutcome": "10x faster diagnosis workflows, 30% reduction in misdiagnosis rates"
+      },
+      "learned": "HIPAA compliance must be built-in from day 1, not retrofitted. Clinical workflow integration more important than ML accuracy.",
+      "stack": ["React", "FastAPI", "PostgreSQL", "TensorFlow", "AWS HIPAA", "HL7 FHIR"]
+    },
+    {
+      "id": "edtech-learning-platform",
+      "title": "Global Learning Platform",
+      "industry": "EdTech",
+      "stage": "Series B",
+      "context": {
+        "problem": "EdTech company needed to scale platform to support 1M+ concurrent users across multiple regions with personalized learning paths.",
+        "constraints": ["Global latency requirements", "FERPA compliance", "Multi-language support"],
+        "stakeholders": ["CTO", "VP Engineering", "Head of Product", "International team"]
+      },
+      "approach": {
+        "architecture": "Multi-region deployment with CDN, microservices with auto-scaling, personalization engine",
+        "decisions": ["Global CDN for content delivery", "Regional data centers", "Event-driven architecture for real-time updates"],
+        "tradeoffs": "Chose eventual consistency over strong consistency for better global performance"
+      },
+      "build": {
+        "timeline": "20 weeks total",
+        "keyComponents": ["Content delivery system", "Personalization engine", "Real-time collaboration", "Analytics platform"],
+        "highlights": ["Week 5: Multi-region setup", "Week 10: Personalization launch", "Week 15: Real-time features", "Week 20: Global rollout"]
+      },
+      "result": {
+        "metrics": {
+          "concurrentUsers": "1M+",
+          "globalLatency": "<100ms P95",
+          "costOptimization": "40% reduction",
+          "revenue": "$10M ARR milestone"
+        },
+        "businessOutcome": "Enabled global expansion, improved learning outcomes by 25%, reduced infrastructure costs"
+      },
+      "learned": "Global scaling requires regional data strategy from the start. Personalization drives engagement more than content quality.",
+      "stack": ["Next.js", "Node.js", "PostgreSQL", "Redis", "Kafka", "AWS Global", "CloudFront"]
+    }
+  ]
+}

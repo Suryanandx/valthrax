@@ -1,0 +1,361 @@
+{
+  "services": [
+    {
+      "id": "product-engineering",
+      "title": "Product Engineering (Web)",
+      "icon": "code",
+      "shortDescription": "Production-grade web applications with clean architecture, multi-tenant data models, and a roadmap that avoids rewrites.",
+      "description": "We design and ship production-grade web applications with clean architecture, multi-tenant data models, and a roadmap that avoids rewrites.",
+      "whoItsFor": "Founders and product leaders who want a fast MVP that can safely grow to v2/v3 without burning months on re-architecture.",
+      "problemsSolved": [
+        "Fragile MVPs that can't scale or pass security reviews",
+        "Slow delivery from over-engineered stacks",
+        "Inconsistent UX and \"spaghetti\" domain models",
+        "Lack of analytics, testing, and deployment hygiene"
+      ],
+      "deliverables": [
+        "Architecture: domain + bounded contexts, API contracts (OpenAPI), modular monorepo or multi-repo",
+        "Back end: NestJS/Node or FastAPI/Python, background jobs (BullMQ/Queues), caching (Redis)",
+        "Data: Postgres/Prisma with migrations, RLS/tenant isolation, pgvector where needed",
+        "Front end: Next.js/React with a typed design system, accessibility & performance budgets",
+        "Quality: testing pyramid (unit/contract/integration), feature flags (Statsig), seed data",
+        "Ops: CI/CD (GitHub Actions), IaC (Terraform), observability (OpenTelemetry + Sentry), runbooks",
+        "Analytics: event dictionary, dashboards, KPI wiring"
+      ],
+      "processTimeline": {
+        "blueprint": "Blueprint (1 week): scope, risks, diagrams, acceptance criteria",
+        "design": "Design & contracts (1–2 weeks): IA, flows, API + schema contracts, tokens",
+        "build": "Build (4–8 weeks): trunk-based dev, weekly demos, review gates",
+        "hardening": "Hardening (1–2 weeks): load & security checks, error budgets, incident playbooks",
+        "launch": "Launch: smoke tests, canary rollout, handover docs"
+      },
+      "technicalApproach": [
+        "Favor simple, typed, boring tech; reach for Kafka/streams only when the workload needs it",
+        "Multi-tenancy via tenant_id + RLS (or schema-per-tenant for strict isolation)",
+        "Contracts first; break changes via versioned endpoints",
+        "Server-side rendering for perf/SEO; edge caching for hot paths"
+      ],
+      "successMetrics": "Lead time ↓ • Defect rate ↓ • p95 latency ↓ • Activation/retention ↑ • Cost per request ↘",
+      "exampleOutcome": "Rebuilt a social-commerce core: 60% faster page loads, 0 major incidents, +18% activation in 6 weeks.",
+      "faqs": [
+        {
+          "q": "Do you work in our repo?",
+          "a": "Yes; your IP, our discipline."
+        },
+        {
+          "q": "Will you train our team?",
+          "a": "We pair program and run handover workshops."
+        }
+      ],
+      "cta": "Request a 1-page blueprint for your product in 48 hours.",
+      "techStack": ["NestJS", "FastAPI", "Next.js", "React", "PostgreSQL", "Prisma", "Redis", "Terraform", "OpenTelemetry", "Sentry"]
+    },
+    {
+      "id": "ai-automation",
+      "title": "AI & Automation",
+      "icon": "AIBrainIcon",
+      "shortDescription": "LLM-powered features and agents that actually move metrics—designed with evaluation, guardrails, and cost control.",
+      "description": "LLM-powered features and agents that actually move metrics—designed with evaluation, guardrails, and cost control.",
+      "whoItsFor": "Teams with specific workflows (support, ops, finance, education, healthcare) where automation or AI assistance creates measurable savings or new value.",
+      "problemsSolved": [
+        "Demo-ware that fails in production",
+        "Hallucinations and data-leak risks",
+        "Unclear ROI and no evaluation harness",
+        "Cost spikes from naive prompting"
+      ],
+      "deliverables": [
+        "Use-case framing: task analysis, success metrics, failure modes",
+        "System design: RAG/agents, tool use, deterministic fallbacks",
+        "Data: retrieval stores (pgvector), embeddings strategy, redaction/PII handling",
+        "Models: OpenAI/Groq integrations, optional self-hosted (Ollama)",
+        "Guardrails: content filtering, tool constraints, human-in-the-loop steps",
+        "Eval & telemetry: offline suites, golden sets, drift alerts, prompt/version registry",
+        "Ops: cost dashboards, rate-limit and retry strategy, timeouts/circuit breakers"
+      ],
+      "processTimeline": {
+        "problemSpec": "Problem spec (3–5 days) → define tasks, KPIs, constraints",
+        "thinSlice": "Thin slice (1–2 weeks) → build the smallest valuable agent/feature",
+        "evaluation": "Evaluation (1 week) → golden sets, acceptance thresholds, red-team",
+        "rollout": "Rollout (1 week) → feature flag, audit trails, cost controls",
+        "scale": "Scale (ongoing) → dataset curation, active learning, prompt/tool iteration"
+      },
+      "technicalApproach": [
+        "Prefer tools-first agents (small, deterministic tools) over free-form chat",
+        "Retrieval with pgvector on Postgres unless scale dictates a managed vector DB",
+        "Separate safety (content policy) from capability (task); log both",
+        "Automate prompt/versioning in CI; treat prompts like code"
+      ],
+      "successMetrics": "Task time ↓ • Resolution/accuracy ↑ • Cost per task ↘ • Escalation rate ↓",
+      "exampleOutcome": "Claims triage assistant: 70% faster processing, >96% accuracy on golden sets, cost/task –58%.",
+      "faqs": [
+        {
+          "q": "Will you replace humans?",
+          "a": "We design for human oversight where it matters."
+        },
+        {
+          "q": "How do you avoid leaks?",
+          "a": "PII redaction, tenancy isolation, and signed requests."
+        }
+      ],
+      "cta": "Send a workflow; we'll return an AI design + ROI model.",
+      "techStack": ["OpenAI GPT-4", "Groq", "LangChain", "pgvector", "PostgreSQL", "FastAPI", "Redis", "Ollama"]
+    },
+    {
+      "id": "mobile-development",
+      "title": "Mobile Engineering (React Native)",
+      "icon": "mobile",
+      "shortDescription": "iOS/Android apps with native polish, offline-first patterns, and robust build pipelines.",
+      "description": "iOS/Android apps with native polish, offline-first patterns, and robust build pipelines.",
+      "whoItsFor": "Companies needing parity with web or mobile-first businesses that require performance, reliability, and store compliance.",
+      "problemsSolved": [
+        "Crashes and frame drops",
+        "Slow startup and heavy bundles",
+        "Painful releases and review rejections",
+        "Inconsistent theming and accessibility"
+      ],
+      "deliverables": [
+        "App shell: RN CLI (0.80+), Fabric/Hermes, typed navigation, deep links",
+        "Theming & DS: NativeWind/Tailwind tokens, component library, dark mode",
+        "Offline: normalized cache, persisted storage, sync strategy, conflict resolution",
+        "Native: camera/media, biometrics, secure storage, background tasks",
+        "Comms: push/in-app (Customer.io/FCM/APNS), analytics events",
+        "Quality: Detox/E2E, performance budgets, crash reporting (Sentry)",
+        "Release: fastlane pipelines, TestFlight/Play tracks, CodePush/OTA"
+      ],
+      "processTimeline": {
+        "blueprint": "Blueprint & store checklist",
+        "design": "Design tokens + nav",
+        "build": "Feature wedges (iterative vertical slices)",
+        "qa": "QA matrices, device labs",
+        "launch": "Store readiness & launch"
+      },
+      "successMetrics": "Crash-free sessions ↑ • p95 TTI ↓ • App Size ↓ • Feature completion velocity ↑",
+      "exampleOutcome": "Care app v1 → <1% crash rate, TTI –35%, 5-star store reviews within 30 days.",
+      "faqs": [
+        {
+          "q": "Expo or CLI?",
+          "a": "We default to CLI; adopt Expo modules when it helps without lock-in."
+        },
+        {
+          "q": "OTA?",
+          "a": "Yes—safely for JS assets; native changes go through store review."
+        }
+      ],
+      "cta": "Ask for our RN checklist and device-matrix template.",
+      "techStack": ["React Native", "TypeScript", "NativeWind", "Detox", "Fastlane", "CodePush", "Sentry"]
+    },
+    {
+      "id": "cloud-devops",
+      "title": "Cloud & DevOps",
+      "icon": "cloud",
+      "shortDescription": "Secure, automated infrastructure with observability, reliability targets, and cost visibility.",
+      "description": "Secure, automated infrastructure with observability, reliability targets, and cost visibility.",
+      "whoItsFor": "Teams that need predictable releases, security baselines, and a clean path from staging to production.",
+      "problemsSolved": [
+        "Snowflake infra and manual deploys",
+        "Outages without root cause",
+        "Cost creep and noisy alerts",
+        "Compliance blockers"
+      ],
+      "deliverables": [
+        "Environments: dev/stage/prod with promotion gates",
+        "Runtime: AWS ECS/Fargate or Lambda; GCP Cloud Run as appropriate",
+        "Networking: VPC, subnets, security groups, WAF, private links",
+        "State: Postgres, S3, Redis; backups, PITR, DR drills",
+        "Secrets & access: AWS SSM/Secrets Manager, IAM least-privilege, SSO",
+        "CI/CD: GitHub Actions, blue/green or canary, rollbacks",
+        "Observability: OpenTelemetry, CloudWatch/Prometheus + Grafana, alerting to Slack/PagerDuty",
+        "Security: CIS baselines, image scanning, dependency checks",
+        "FinOps: cost dashboards, budgets/alerts, right-sizing"
+      ],
+      "processTimeline": {
+        "assessment": "Assessment & threat model",
+        "terraform": "Terraform plan & review",
+        "pipelines": "Pipelines & deploys",
+        "slo": "SLO/SLI definition",
+        "gamedays": "Game days & handover"
+      },
+      "successMetrics": "MTTR ↓ • Change failure rate ↓ • Deployment frequency ↑ • Cloud spend ↘ per request",
+      "exampleOutcome": "Migrated serverless to Terraform/ECS: 99.95% SLO, deploys → 10/day, –23% cost.",
+      "faqs": [
+        {
+          "q": "Kubernetes?",
+          "a": "We prefer ECS/Cloud Run until K8s is justified."
+        },
+        {
+          "q": "Vendor lock-in?",
+          "a": "IaC + containerization keeps options open."
+        }
+      ],
+      "cta": "Get a 2-page DevOps hardening plan for your stack.",
+      "techStack": ["AWS", "GCP", "Terraform", "Docker", "GitHub Actions", "OpenTelemetry", "Grafana", "Prometheus"]
+    },
+    {
+      "id": "data-analytics",
+      "title": "Data & Analytics",
+      "icon": "database",
+      "shortDescription": "Event modeling, data pipelines, dashboards, and experimentation that inform product and revenue decisions.",
+      "description": "Event modeling, data pipelines, dashboards, and experimentation that inform product and revenue decisions.",
+      "whoItsFor": "Founders/PMs who need a trusted single source of truth and the ability to run valid experiments.",
+      "problemsSolved": [
+        "Messy, inconsistent events and dashboards",
+        "\"Shipping without measurement\"",
+        "Experiments with weak power or bias",
+        "Data access without governance"
+      ],
+      "deliverables": [
+        "Tracking plan: event dictionary, naming, payloads, identity resolution",
+        "Pipelines: ELT/ETL (Airbyte/Dagster), dbt models, warehouse (BigQuery/Snowflake/Postgres)",
+        "Dashboards: Metabase/Superset, executive & team views",
+        "Experimentation: Statsig setup, guardrails, CUPED/Sequential tests where relevant",
+        "Governance: roles, PII classification, retention, lineage",
+        "Docs: metric definitions, runbooks, QA checks"
+      ],
+      "processTimeline": {
+        "metrics": "Metrics workshop → north-star + leading indicators",
+        "instrumentation": "Instrumentation → ship the plan with code reviews",
+        "modeling": "Modeling → dbt semantic layers",
+        "dashboards": "Dashboards & alerts",
+        "experiments": "Experiment framework → templates + training"
+      },
+      "successMetrics": "Decision latency ↓ • KPI trust ↑ • Experiment time ↓ • Data incidents ↓",
+      "exampleOutcome": "Implemented tracking + Statsig: time-to-insight –70%, conversion +12% after 3 experiments.",
+      "faqs": [
+        {
+          "q": "Segment or direct?",
+          "a": "Either; we're pragmatic."
+        },
+        {
+          "q": "Who owns data?",
+          "a": "You do. We minimize third-party lock-in."
+        }
+      ],
+      "cta": "Request a tracking plan for your top 3 funnels.",
+      "techStack": ["BigQuery", "Snowflake", "dbt", "Airbyte", "Dagster", "Metabase", "Statsig", "Segment"]
+    },
+    {
+      "id": "design-research",
+      "title": "Design & Research",
+      "icon": "GridLayoutIcon",
+      "shortDescription": "Conversion-focused UX and a coherent design system that accelerates development.",
+      "description": "Conversion-focused UX and a coherent design system that accelerates development.",
+      "whoItsFor": "Teams that need clarity, speed, and measurable UX improvements.",
+      "problemsSolved": [
+        "Pretty UI that doesn't convert",
+        "Inconsistent components and token sprawl",
+        "Accessibility gaps",
+        "Slow design-dev handoff"
+      ],
+      "deliverables": [
+        "Research: stakeholder interviews, heuristic review, usability tests",
+        "Information architecture: flows, navigation, states, empty/error/loading",
+        "Design system: tokens (color/typography/spacing), components, patterns, usage docs",
+        "Screens: high-fidelity prototypes, redlines/specs",
+        "CRO: copy, pricing page patterns, experiment ideas",
+        "Accessibility: WCAG 2.2 audit, focus and keyboard maps"
+      ],
+      "processTimeline": {
+        "discovery": "Discovery & heuristics",
+        "flows": "Flows & low-fi",
+        "tokens": "Tokens & components",
+        "hifi": "Hi-fi & prototypes",
+        "handoff": "Handoff & QA (paired with engineers)"
+      },
+      "successMetrics": "Activation ↑ • Task completion time ↓ • Support tickets ↓ • Build velocity ↑",
+      "exampleOutcome": "Redesigned onboarding → +18% activation, –22% support tickets in 30 days.",
+      "faqs": [
+        {
+          "q": "Figma only?",
+          "a": "We also ship token JSON/Tailwind/Storybook for dev parity."
+        },
+        {
+          "q": "Visual refresh or full system?",
+          "a": "We scope to impact and timeline."
+        }
+      ],
+      "cta": "Ask for a rapid heuristic review of your top 2 flows.",
+      "techStack": ["Figma", "Storybook", "Tailwind CSS", "WCAG 2.2", "Framer", "Principle"]
+    },
+    {
+      "id": "revops-engineering",
+      "title": "RevOps Engineering",
+      "icon": "BarChartIcon",
+      "shortDescription": "The growth plumbing: billing, pricing experiments, lifecycle communications, CRM/CDP wiring, and attribution that ties back to revenue.",
+      "description": "The growth plumbing: billing, pricing experiments, lifecycle communications, CRM/CDP wiring, and attribution that ties back to revenue.",
+      "whoItsFor": "B2B/B2C SaaS and marketplaces that need revenue reliability and clarity on what drives it.",
+      "problemsSolved": [
+        "Leaky funnels and unclear attribution",
+        "Revenue stuck due to billing/retries/dunning gaps",
+        "Manual lead routing and slow follow-ups",
+        "Pricing changes that take engineering weeks"
+      ],
+      "deliverables": [
+        "Billing: Stripe/Razorpay subscriptions, invoices, webhooks, taxation (GST/VAT), proration, credits, coupons, dunning",
+        "Plans & entitlements: feature flags, usage metering, overages",
+        "Lifecycle comms: Customer.io journeys (trial → activation → expansion → win-back)",
+        "CRM/CDP: HubSpot/Salesforce/Segment wiring, lead scoring, routing, SLAs",
+        "Attribution: UTMs, postback, blended view across paid/organic/referrals",
+        "Dashboards: MRR/ARR, cohort retention, payback, LTV/CAC"
+      ],
+      "processTimeline": {
+        "funnel": "Funnel mapping & revenue model",
+        "billing": "Billing and entitlement implementation",
+        "journeys": "Journeys & notifications",
+        "attribution": "Attribution & dashboards",
+        "pricing": "Pricing experiment framework"
+      },
+      "successMetrics": "Net revenue retention ↑ • Failed payments ↓ • Time-to-first-value ↓ • Sales velocity ↑",
+      "exampleOutcome": "Introduced dunning + wallet retries: recovered 14–22% of failed payments; ARPU +9% post pricing tests.",
+      "faqs": [
+        {
+          "q": "Finance integration?",
+          "a": "Yes—export to your ledger; reconciliation reports included."
+        },
+        {
+          "q": "Sales handoff?",
+          "a": "We build SLAs and alerts into CRM."
+        }
+      ],
+      "cta": "Send your pricing page; we'll reply with 3 changes and expected lift.",
+      "techStack": ["Stripe", "Razorpay", "Customer.io", "HubSpot", "Salesforce", "Segment", "Mixpanel"]
+    },
+    {
+      "id": "security-compliance",
+      "title": "Security, Privacy & Compliance",
+      "icon": "security",
+      "shortDescription": "Security by design: access controls, data protection, auditability, and pathways to SOC 2/GDPR/HIPAA.",
+      "description": "Security by design: access controls, data protection, auditability, and pathways to SOC 2/GDPR/HIPAA.",
+      "whoItsFor": "Teams that sell to enterprise or handle PII/PHI/financial data.",
+      "problemsSolved": [
+        "Security gaps blocking enterprise deals",
+        "Compliance requirements without clear roadmap",
+        "Data handling without proper controls",
+        "Audit preparation taking months"
+      ],
+      "deliverables": [
+        "Access: SSO/SAML, RBAC/ABAC, audit logs",
+        "Data: encryption in transit/at rest, key rotation, tenancy isolation, retention/TTL",
+        "AppSec: SAST/DAST, dependency and image scanning, secrets hygiene",
+        "Compliance: SOC 2 control mapping, GDPR flows (DSAR/erasure), HIPAA safeguards",
+        "Ops: incident response, backups/DR, vuln management, penetration test prep"
+      ],
+      "processTimeline": {
+        "assess": "Assess → Prioritize controls → Implement → Validate → Document & train"
+      },
+      "successMetrics": "Security findings resolved ↑ • Time to patch ↓ • Enterprise readiness ↑",
+      "exampleOutcome": "SOC 2 Type II certification achieved in 4 months, enabling $2M+ enterprise deals.",
+      "faqs": [
+        {
+          "q": "Which compliance standards?",
+          "a": "SOC 2, GDPR, HIPAA, PCI DSS based on your needs."
+        },
+        {
+          "q": "Ongoing support?",
+          "a": "Yes, we provide monitoring and annual audit prep."
+        }
+      ],
+      "cta": "Ask for a lightweight gap assessment aligned to your target standard.",
+      "techStack": ["AWS IAM", "Okta", "Vanta", "Drata", "SAST/DAST tools", "Encryption libraries"]
+    }
+  ]
+}

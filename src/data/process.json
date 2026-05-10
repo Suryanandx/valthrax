@@ -1,0 +1,115 @@
+{
+  "phases": [
+    {
+      "id": "discover-define",
+      "title": "Discover & Define",
+      "duration": "1–2 weeks",
+      "description": "Stakeholder interviews, problem framing, KPI model, risk register.",
+      "deliverables": [
+        "Problem brief",
+        "North-star metrics",
+        "Success criteria"
+      ],
+      "activities": [
+        "Stakeholder interviews",
+        "Market research",
+        "Competitive analysis",
+        "Risk assessment",
+        "Success metrics definition"
+      ]
+    },
+    {
+      "id": "technical-blueprint",
+      "title": "Technical Blueprint",
+      "duration": "1 week",
+      "description": "Architecture, data model, integrations, buy-vs-build, security plan.",
+      "deliverables": [
+        "Diagram pack",
+        "Scope definition",
+        "Estimates",
+        "Cut lines",
+        "Test strategy"
+      ],
+      "activities": [
+        "System architecture design",
+        "Technology selection",
+        "Integration planning",
+        "Security architecture",
+        "Performance planning"
+      ]
+    },
+    {
+      "id": "design-sprints",
+      "title": "Design Sprints",
+      "duration": "1–2 weeks",
+      "description": "IA, flows, clickable prototype, usability tests.",
+      "deliverables": [
+        "Design system tokens",
+        "Redlines",
+        "Acceptance criteria"
+      ],
+      "activities": [
+        "Information architecture",
+        "User flow mapping",
+        "Prototype creation",
+        "Usability testing",
+        "Design system setup"
+      ]
+    },
+    {
+      "id": "build",
+      "title": "Build",
+      "duration": "4–8 weeks for MVP",
+      "description": "Trunk-based dev, CI/CD, weekly demos, QA gates.",
+      "deliverables": [
+        "Shippable app",
+        "Infra as code",
+        "Runbooks",
+        "Analytics wired"
+      ],
+      "activities": [
+        "Feature development",
+        "Continuous integration",
+        "Quality assurance",
+        "Performance optimization",
+        "Security implementation"
+      ]
+    },
+    {
+      "id": "launch-hardening",
+      "title": "Launch & Hardening",
+      "duration": "2–4 weeks",
+      "description": "Load tests, security checks, incident playbooks.",
+      "deliverables": [
+        "SLOs/SLIs",
+        "On-call rota",
+        "Rollback plans"
+      ],
+      "activities": [
+        "Load testing",
+        "Security audits",
+        "Monitoring setup",
+        "Incident response planning",
+        "Documentation finalization"
+      ]
+    },
+    {
+      "id": "scale-optimize",
+      "title": "Scale & Optimize",
+      "duration": "Ongoing",
+      "description": "A/B tests, pricing, performance, feature wedges.",
+      "deliverables": [
+        "Experiment reports",
+        "Roadmap v2",
+        "Cost/perf dashboards"
+      ],
+      "activities": [
+        "Performance optimization",
+        "A/B testing",
+        "Feature iteration",
+        "Cost optimization",
+        "Scaling preparation"
+      ]
+    }
+  ]
+}
