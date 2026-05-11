@@ -141,6 +141,12 @@
         "description": "Open-source meeting notes. Local Whisper transcription + LLM summaries. No bots, no cloud.",
         "href": "https://github.com/Suryanandx/muesli",
         "tag": "open-source"
+      },
+      {
+        "title": "Lux UI",
+        "description": "Open-source UI kit for modern SaaS. 60+ components in 12KB gzipped. Native dark mode, theme-able, zero dependencies — built to beat shadcn on size.",
+        "href": "https://lux.valthrax.com",
+        "tag": "open-source"
       }
     ],
     "result": "Faster time-to-value, lower defect rate, predictable delivery."
